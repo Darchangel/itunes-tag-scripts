@@ -43,7 +43,6 @@ def main(args):
 
         if tags_to_add != []:
             for tag in tags_to_add: #TODO: change the script so it accepts multiple tags at once
-                print(" ".join([SCRIPT_PROGRAM, ADD_TAG_SCRIPT, tag]))
                 subprocess.call([SCRIPT_PROGRAM, ADD_TAG_SCRIPT, tag])
 
 
