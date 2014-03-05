@@ -1,4 +1,4 @@
-Itunes Tag script
+iTunes Tag script
 ===
 
 Small set of scripts to add tags to songs on iTunes.
