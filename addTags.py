@@ -20,9 +20,9 @@ json_file = open(path.join(SCRIPT_FOLDER, TAGS_FILE))
 TAGS = json.load(json_file)
 
 def main(args):
+    #Launchbar passes args as one string only. We need to split!
     split_args = [actual_arg for sublist in [each_arg.split(' ') for each_arg in args] for actual_arg in sublist]
 
-    #Launchbar passes args as one string only. We need to split!
     if 'reset' in split_args:
         subprocess.call([SCRIPT_PROGRAM, path.join(SCRIPT_FOLDER, RESET_SCRIPT)])
     else:
