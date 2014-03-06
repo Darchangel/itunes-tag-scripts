@@ -1,9 +1,12 @@
-[
-    "cool",
-    "heavy",
-    "calm",
-    "happy",
-    "sad",
-    "dance",
-    "not"
-]
+{
+    "pattern": ":{}:",
+    "tags": [
+        "cool",
+        "heavy",
+        "calm",
+        "happy",
+        "sad",
+        "dance",
+        "not"
+    ]
+}
