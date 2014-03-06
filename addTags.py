@@ -30,7 +30,8 @@ TAGS = [
     'instrument',
     'lol',
     'not',
-    'game'
+    'game',
+    'live'
 ]
 
 def main(args):
