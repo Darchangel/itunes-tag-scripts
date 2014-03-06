@@ -29,16 +29,20 @@ TAGS = [
     'beat',
     'instrument',
     'lol',
-    'not'
+    'not',
+    'game'
 ]
 
 def main(args):
-    tags_to_add = []
+    split_args = [actual_arg for sublist in [each_arg.split(' ') for each_arg in args] for actual_arg in sublist]
 
-    if 'reset' in args:
+    #Launchbar passes args as one string only. We need to split!
+    if 'reset' in split_args:
         subprocess.call([SCRIPT_PROGRAM, os.path.join(SCRIPT_FOLDER, RESET_SCRIPT)])
     else:
-        for prefix in args:
+        tags_to_add = []
+        for prefix in split_args:
+
             matches = [word for word in TAGS if word.startswith(prefix)]
             if len(matches) == 1: #EXACTLY 1 match
                 tags_to_add.append(TAG_PATTERN.format(matches[0]))
